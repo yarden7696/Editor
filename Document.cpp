@@ -18,12 +18,11 @@ void Document::minus(int num) {
 void Document::addLine_before() {
     currLine--;
     std::string s;
-    //printf("Please enter a sentence from the song :\n ");
     std::getline(std::cin,s);
 
     while (s!=".") {
-        if(editSong.size()>0) {
-        editSong.insert(editSong.begin()+currLine,s);
+        if(editSong.size()>0) { 
+            editSong.insert(editSong.begin()+currLine,s);
              std::getline(std::cin,s);  
               currLine++; 
             } 
@@ -79,7 +78,6 @@ std:: string l2=editSong.at(currLine);
 std::vector<std::string>::iterator it;
 it=editSong.begin();
 editSong.erase(it+currLine);
-
 editSong.at(currLine-1)=l1+" "+l2;
 }
 
