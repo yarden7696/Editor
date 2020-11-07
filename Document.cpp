@@ -19,7 +19,6 @@ void Document::addLine_before() {
     currLine--;
     std::string s;
     std::getline(std::cin,s);
-
     while (s!=".") {
         if(editSong.size()>0) { 
             editSong.insert(editSong.begin()+currLine,s);
@@ -35,10 +34,8 @@ void Document::addLine_before() {
 
 
 void Document::addLine_after() {
-   
     std::string s;
     std::getline(std::cin,s);
-    
     while (s!=".") {
         editSong.insert(editSong.begin()+currLine,s); 
             currLine++;
@@ -56,7 +53,6 @@ void Document::delete_line() {
 
 
 void Document::write_toFile(std::string fileName){
-   
   std::ofstream myFile;
   myFile.open (fileName);
   int i=0;
@@ -71,7 +67,6 @@ void Document::write_toFile(std::string fileName){
 
 //j
 void Document::merge2Lines() {
-
 std:: string l1=editSong.at(currLine-1);
 std:: string l2=editSong.at(currLine);
 
@@ -84,7 +79,6 @@ editSong.at(currLine-1)=l1+" "+l2;
  
  // /text/
  void Document::text_(std::string text) {
-  
   bool b=false;
   for(int i=currLine+1; i<editSong.size(); i++){
       std::string line= editSong.at(i);
@@ -107,7 +101,6 @@ editSong.at(currLine-1)=l1+" "+l2;
 
 // s/old/new
 void Document::old_new(std::string _old, std::string _new) {
-
    std::string cut,before,after,final;
    int indx= editSong.at(currLine-1).find(_old); // indx is the index of the old word
     
