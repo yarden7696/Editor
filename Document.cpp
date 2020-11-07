@@ -12,10 +12,8 @@ void Document::exit_() { exit(0); }
 
 void Document::minus(int num) { 
     if((currLine-num)<0) throw std::out_of_range {"Row cannot be less than 0"};
-    else 
-        currLine= currLine-num; 
+    else currLine= currLine-num; 
     }
-
 
 void Document::addLine_before() {
     currLine--;
