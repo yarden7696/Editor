@@ -7,7 +7,7 @@ int main (int argc, char* argv[]) {
 Editor e;
 switch (argc) {
 
-case 1: e.myLoop();
+
 case 2: {
 
 std::fstream orgnl_file;
@@ -34,6 +34,7 @@ orgnl_file.open(argv[1], std::ios::in);
 }
      
 
-e.myLoop();
+
 }
+e.myLoop();
 }
