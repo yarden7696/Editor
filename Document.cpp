@@ -5,7 +5,6 @@
 #include <algorithm> 
 
 
-
 void Document::lineOne() { currLine=1; }
 void Document::plus(int num) { currLine= currLine+num; }
 void Document::moveLstLine() { currLine= editSong.size(); }
