@@ -1,8 +1,6 @@
 #include "Document.h"
 
-
 class Editor {
-
 public:
     Document myDoc;
 public:
@@ -10,4 +8,3 @@ public:
     Editor(Document doc):myDoc(doc){}
     void myLoop();
 };
-
