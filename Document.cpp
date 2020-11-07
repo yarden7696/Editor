@@ -9,13 +9,13 @@
 void Document::lineOne() { currLine=1; }
 void Document::plus(int num) { currLine= currLine+num; }
 void Document::moveLstLine() { currLine= editSong.size(); }
+void Document::exit_() { exit(0); }
 
 void Document::minus(int num) { 
     if((currLine-num)<0) throw std::out_of_range {"Row cannot be less than 0"};
     else 
         currLine= currLine-num; 
     }
-
 
 
 void Document::addLine_before() {
@@ -34,14 +34,14 @@ void Document::addLine_before() {
                 editSong.push_back(s);
                  currLine++;
             }            
-}
-}
+       }
+  }
+
 
 void Document::addLine_after() {
-   // currLine++;
+   
     std::string s;
-    //printf("Please enter a sentence from the song :\n");
-     std::getline(std::cin,s);
+    std::getline(std::cin,s);
     
     while (s!=".") {
         editSong.insert(editSong.begin()+currLine,s); 
@@ -55,9 +55,7 @@ void Document::addLine_after() {
 void Document::delete_line() {
    std::vector<std::string>::iterator it;
    it=editSong.begin();
-   editSong.erase(it+currLine-1);
-
-    
+   editSong.erase(it+currLine-1); 
 }
 
 
@@ -81,17 +79,13 @@ void Document::merge2Lines() {
 std:: string l1=editSong.at(currLine-1);
 std:: string l2=editSong.at(currLine);
 
- std::vector<std::string>::iterator it;
-   it=editSong.begin();
-   editSong.erase(it+currLine);
+std::vector<std::string>::iterator it;
+it=editSong.begin();
+editSong.erase(it+currLine);
 
 editSong.at(currLine-1)=l1+" "+l2;
-
 }
 
-void Document::exit_() {
-    exit(0);
-}
  
  // /text/
  void Document::text_(std::string text) {
@@ -105,16 +99,16 @@ void Document::exit_() {
           break;
       }
   }
-  if(!b){
+  if(!b) {
   for (int i = 0; i <=currLine; i++) {
       std::string line= editSong.at(i);
       if(line.find(text)!= std::string::npos){
           currLine=i+1;
           break;
-  }
-  }   
- }
- }
+         }
+      }   
+   }
+}
 
 // s/old/new
 void Document::old_new(std::string _old, std::string _new) {
