@@ -6,7 +6,7 @@
 class Document {
 public:
     std::vector<std::string> editSong; // the text song that we need to edit.
-    int currLine;
+    int currLine=0;
 public:
 //CONSTRUCTOR
 Document(std::vector<std::string> v, std::vector<std::string> cmds,int line): editSong(v),currLine(0){}

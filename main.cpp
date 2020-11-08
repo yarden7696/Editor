@@ -11,7 +11,6 @@ switch (argc) {
 case 2: {
 
 std::fstream orgnl_file;
-// in argv[1] there is the name of the text file, we open it and then read its lines 
 orgnl_file.open(argv[1], std::ios::in);  
 
   if ( !orgnl_file.is_open() ) {
@@ -29,12 +28,9 @@ orgnl_file.open(argv[1], std::ios::in);
   } //end else
 
       e.myDoc.currLine=1;
-      
-
+      break;
 }
      
-
-
 }
 e.myLoop();
 }
