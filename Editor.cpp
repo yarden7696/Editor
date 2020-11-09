@@ -2,9 +2,7 @@
 #include <iostream>
 #include <string>
 
-
 void Editor::myLoop() {
-
 while (true){
    
 std::string choice;
@@ -51,7 +49,7 @@ else if (choice.at(0)=='/') {
    std::string s = choice.substr(1,choice.size()-2);
    myDoc.text_(s); 
 }
-
+   
 else if (choice.at(0)=='s') {  
     int counter=0;
     std::string _old,_new;
@@ -65,7 +63,6 @@ else if (choice.at(0)=='s') {
         }
     }
 }
-
 else
     break;
 }
