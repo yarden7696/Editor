@@ -1,6 +1,5 @@
 #include "Document.h"
 
-
 class Editor {
 
 public:
