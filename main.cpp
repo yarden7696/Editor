@@ -5,9 +5,8 @@
 int main (int argc, char* argv[]) {
 
 Editor e;
+  
 switch (argc) {
-
-
 case 2: {
 
 std::fstream orgnl_file;
@@ -26,11 +25,9 @@ orgnl_file.open(argv[1], std::ios::in);
       }
       orgnl_file.close();
   } //end else
-
       e.myDoc.currLine=1;
       break;
-}
-     
-}
+       }  
+   }
 e.myLoop();
 }
